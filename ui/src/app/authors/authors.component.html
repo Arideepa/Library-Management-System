@@ -1,0 +1,49 @@
+<html>
+
+<h1 style="font-size:60px" >{{Title}}</h1>
+
+<div style = "float:right">
+    <button class="button" (click)="addAuthors()"> Add Author</button>
+</div>
+ 
+<head>
+    <style>
+    table,
+    th,
+    td {
+        border: 1px #dddcf7d7;
+        border-collapse: collapse;
+    }
+    </style>
+</head>
+
+<body style="text-align: center">
+    <table style="width:95%">
+        <thead>
+            <tr style="height:120px">
+                <!-- <th style="width:14%">Id</th> -->
+                <th style="width:22%">Birth Date</th>
+                <th style="width:22%">Name</th>
+                <th style="width:22%">Nationality</th>
+                <!-- <th style="width:8%">Delete</th> -->
+                
+            </tr>
+        </thead>
+        <tbody style="height:30px">
+          <tr *ngFor="let author of authors">
+            <!--<td>{{authors.id}}</td>-->
+            <td>{{author.birthDate}}</td>
+            <td>{{author.name}}</td>
+            <td>{{author.nationality}}</td>
+            <!-- <td>
+                <button (click)="deleteAuthor(author.id)">Delete</button>
+            </td> -->
+          </tr>
+        </tbody>
+
+        
+       
+    </table>
+</body>
+ 
+</html>
